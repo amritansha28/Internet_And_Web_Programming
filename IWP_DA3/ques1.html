@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var x=prompt("Enter name:");
+        var y=prompt("Entry date (dd-mm-yyyy):");
+        var yt=prompt("Entry time (hh:mm):");
+        var a=y.split("-");
+        var at=yt.split(":");
+        var z=prompt("Exit date(dd-mm-yyyy):");
+        var zt=prompt("Exit time (hh:mm):");
+        var b=z.split("-");
+        var bt=zt.split(":");
+        const d1 = new Date(a[2], a[1], a[0], at[0], at[1]);
+        const d2 = new Date(b[2], b[1], b[0], bt[0], bt[1]);
+        var diff = d2.getTime() - d1.getTime();
+        var actualdiff=diff/(1000*60*60);
+        var actualtime=8;
+        try{
+            if(diff>=actualtime){
+                alert(x+" PRESENT");
+            }
+            else{
+                alert(x+" ABSENT");
+            }
+        }
+        catch(Error){  
+            document.write("Error found: "+e.message);  
+        }  
+    </script>
+</head>
+<body>
+</body>
+</html>

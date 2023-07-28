@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT movies ((moviename)+)>
+<!ELEMENT moviename (title,genre,releasedate,releaseyear,language)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT genre (#PCDATA)>
+<!ELEMENT releasedate (#PCDATA)>
+<!ELEMENT releaseyear (#PCDATA)>
+<!ELEMENT language (#PCDATA)>
