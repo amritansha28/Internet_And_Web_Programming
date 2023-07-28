@@ -1,0 +1,38 @@
+body{
+    background-color: burlywood;
+}
+table{
+    border: 40px solid;
+    border-color: black;
+}
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+td{
+    height: 100px;
+    width: 100px;
+    background-color: white;
+}
+.black{
+    background-color: black;
+}
+img{
+    height: 90px;
+    width: 90px;
+    position: relative;
+    animation: mymove 10s infinite;
+}
+@keyframes mymove{
+    0% {top: 0px; left: 0px;}
+    10% {top: -210px; left: 0px}
+    20% {top: -210px; left: -110px;}
+    30% {top: -210px; left: 0px;}
+    40% {top: 0px; left: 0px;}
+    50% {top: -210px; left: 0px;}
+    60% {top: -210px; left: 110px;}
+    70% {top: -210px; left: 0px;}
+    80% {top: 0px; left: 0px;}
+    90% {top: -110px; left: 0px;}
+    100% {top: -110px; left: 210px;}
+}

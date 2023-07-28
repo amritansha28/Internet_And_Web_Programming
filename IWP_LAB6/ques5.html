@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var pp={"A":"Dear Maam , this is the participant certificate for the conference held in 2021.", 
+        "B":"Dear Sir , this is the participant certificate for the conference held in 2021.", 
+        "C":"Dear Maam , this is the participant certificate for the conference held in 2021.", 
+        "D":"Dear Maam , this is the participant certificate for the conference held in 2021.", 
+        "E":"Dear Sir , this is the participant certificate for the conference held in 2021.", 
+        "F":"Dear Maam , this is the participant certificate for the conference held in 2021.", 
+        "G":"Dear Sir , this is the participant certificate for the conference held in 2021.", 
+        "H":"Dear Sir , this is the participant certificate for the conference held in 2021."}
+        var male = new Array();
+        var female = new Array();
+        for(key in pp){
+            var arr = pp[key].split(" ");
+            if(arr[1]==="Maam"){
+                female.push(" Mrs."+key);
+            }
+            else if(arr[1]==="Sir"){
+                male.push(" Mr."+key);
+            }
+        }
+        document.write("Male participants: "+male+"<br/>Female participants: "+female);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

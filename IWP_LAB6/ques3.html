@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagonal Sum 20BCE1650</title>
+    <script>
+        function max(i,j){
+            if(i>j){
+                return i;
+            }
+            else if(i<j){
+                return j;
+            }
+        }
+        function sumnmax(amrit,n){
+            var sumup=0,sumlow=0;
+            for(var i=0;i<n;i++){
+                for(var j=0;j<n;j++){
+                    if(i<j){
+                        sumup=parseInt(sumup)+parseInt(amrit[i][j]);
+                    }
+                    else if(i>j){
+                        sumlow=parseInt(sumlow)+parseInt(amrit[i][j]);
+                    }
+                }
+            }
+            return max(sumup,sumlow);
+        }
+        var n=prompt("Enter the dimension of matrix: ");
+        var amrit=new Array(n);
+        for(var i=0;i<n;i++){
+            amrit[i]=new Array();
+        }
+        for(var i=0;i<n;i++){
+            for(var j=0;j<n;j++){
+                var x=prompt("Enter element at ("+i+","+j+"): ");
+                amrit[i][j]=x;
+            }
+        }
+        document.write("Entered Matrix:<br/>");
+        for(var i=0;i<n;i++){
+            for(var j=0;j<n;j++){
+                document.write(amrit[i][j]+" ");
+            }
+            document.write("<br/>");
+        }
+        document.write("<br/>Bigger of upper and lower sum is: "+sumnmax(amrit,n));
+    </script>
+</head>
+<body>
+</body>
+</html>

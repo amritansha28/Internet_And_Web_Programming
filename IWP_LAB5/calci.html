@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator-20BCE1650</title>
+    <style>
+        table td{
+            border: 5px solid #000000;
+            text-align: center;
+            height: 114px;
+            width: 114px;
+            background-color: rgb(87, 72, 72);
+        }
+        table{
+            border: 15px solid black;
+            border-radius: 30px;
+        }
+        button{
+            height: 100px;
+            width: 100px;
+            padding: 10px;
+            font-size: 50px;
+            background-color: gray;
+            color: white;
+            border-radius: 20px;
+        }
+        button:hover{
+            color: black;
+            background-color: white;
+            font-weight: bold;
+        }
+        input[type=text]{
+            font-size: 50px;
+            padding-left: 30px;
+            padding-right: 30px;
+            height: 90%;
+            width: 85%;
+            border-radius: 20px;
+        }
+    </style>
+    <script>
+        function clearScreen(){
+            document.getElementById("result").value = "";
+        }
+        function display(value){
+            document.getElementById("result").value += value;
+        }
+        function calculate(){
+            var amrit = document.getElementById("result").value;
+            var ansh = eval(amrit);
+            document.getElementById("result").value = ansh;
+        }
+    </script>
+</head>
+<body>
+    <center>
+    <table>
+        <thead>
+            <tr>
+                <td colspan="4" style="font-size: 70px;"><input class="display-box" type="text" id="result" disabled/></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><button onclick="display('(')">(</button></td><td><button onclick="display(')')">)</button></td><td><button onclick="display('%')">%</button></td><td><button onclick="display('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="display('7')">7</button></td><td><button onclick="display('8')">8</button></td><td><button onclick="display('9')">9</button></td><td><button onclick="display('*')">*</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="display('4')">4</button></td><td><button onclick="display('5')">5</button></td><td><button onclick="display('6')">6</button></td><td><button onclick="display('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="display('1')">1</button></td><td><button onclick="display('2')">2</button></td><td><button onclick="display('3')">3</button></td><td><button onclick="display('+')">+</button></td>
+            </tr>
+        </tbody>
+        <tr>
+            <td><button onclick="clearScreen()">C</button></td><td><button onclick="display('0')">0</button></td><td><button onclick="display('.')">.</button></td><td><button onclick="calculate()">=</button></td>
+        </tr>
+    </table>
+    </center>
+</body>
+</html>

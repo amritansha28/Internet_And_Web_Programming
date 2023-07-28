@@ -1,0 +1,32 @@
+<!DOCTBE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks Sort 20BCE1650</title>
+    <script>
+        function swap(amritansh,A,B){
+            var temp = amritansh[A];
+            amritansh[A] = amritansh[B];
+            amritansh[B] = temp;
+        }
+        function Sort(amritansh,n){
+            var i,j;
+            for(i=0;i<n-1;i++){
+                for(j=0;j<n-i-1;j++){
+                    if(amritansh[j]<amritansh[j+1]){
+                        swap(amritansh,j,j+1);
+                    }
+                }
+            }
+        }
+        var amritansh=[55,59,37,60,12,23];
+        var n=7;
+        Sort(amritansh,n);
+        document.write("Marks in descending order: "+amritansh);
+    </script>
+</head>
+<body>
+</body>
+</html>

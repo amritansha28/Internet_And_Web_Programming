@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var flag=0;
+        var n=prompt("Enter dimension of board:");
+        var size = 2; //max possible size of battleship
+        //generating x & y coordinate of ship
+        do{
+            var battleship = new Array();
+            var guess=new Array();
+            for(var i=0;i<2*size;i++){
+                var xy = Math.floor(Math.random()*n);
+                battleship.push(xy);
+            }
+            var j=1;
+            for(var i=0;i<2*size;i++){
+                if(i%2==0)
+                    var ab=prompt("Enter x"+j+" coordinate:");
+                else{
+                    var ab=prompt("Enter y"+j+" coordinate:");
+                    j++;
+                }
+                guess.push(ab);
+            }
+            if(battleship.join()==guess.join()){
+                alert("You guessed it!!!");
+                break;
+            }
+            else{
+                alert("Wrong guess!! Chances left "+(3-(flag+1)));
+                flag++;
+            }
+        }while(flag<3);
+        if(flag==3){
+            document.write("Better luck next time!!<br/>");
+        }
+        document.write("Correct coordinates are: ");
+        document.write(battleship);
+    </script>
+</head>
+<body>
+</body>
+</html>
