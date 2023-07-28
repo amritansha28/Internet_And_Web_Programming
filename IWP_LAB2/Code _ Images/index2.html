@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:navy">
+    <table>
+        <tr>
+            <thead>
+                <th colspan="7" style="border:15px solid white;border-radius: 30px;background-color: white;">     
+                    <h1>Fake Profile Identification Using Machine Learning</h1>
+                    <h2><img src="Amrit5.png" width="100px" height="100" align="left">Samala Durga Prasad Reddy<img src="Amrit4.png" width="100px" height="100" align="right"></h2>
+                    <h3>Indian Institute of Technology Bombay, Computer Science and Engineering, Mumbai, Maharashtra, India</h3>
+                </th>
+            </thead>
+        </tr>
+        <tr><td colspan="7" style="height:10px;"></td></tr>
+        <tr VALIGN=TOP>
+            <td align="justify" style="height:100px;width:350px;border:15px solid white;border-radius: 30px;background-color: white;">
+                <h2 align="center">Introduction</h2>
+                <section><p>Social networking site is a website where each user has a profile and can keep in contact with friends, share their updates, meet new people who have the same interests. These Online Social Networks (OSN) use web2.0 technology, which allows users to interact with each other. Social networking sites are growing rapidly and changing the way people keep in contact with each other. The online communities bring people with the same interests together which makes users easier to make new friends.</p><p>These social networking sites starting with http://www.sixdegrees.com in 1997 then came http://www.makeoutclub.com in 2000. Sixdegrees.com couldn’t survive much and closed very soon but new sites like myspace, LinkedIn, Bebo became successful and Facebook was launched in 2004 and presently it is the largest social networking site in the world.</p><p>In the present generation, the social life of everyone has become associated with online social networks. These sites have made a drastic change in the way we pursue our social life. Adding new friends and keeping in contact with them and their updates has become easier. Online social networks have an impact on science, education, grassroots organizing, employment, business, etc. Researchers have been studying these online social networks to see the impact they make on the people. Teachers can teach the students easily through this making a friendly environment for the students to study, teachers nowadays teachers are getting themselves familiar with these sites bringing online classroom pages, giving homework, making discussions, etc. which improves education a lot. The employers can use these social networking sites to employ the people who are talented and interested in the work, their background check can be done easily using this. Most of the OSN is free but some charge the membership fee and uses this for business purposes and the rest of them raise money by using the advertising. This can be used by the government to get the opinions of the public quickly. The examples of these social networking sites are sixdegrees.com, The Sphere, Nexopia which is used in Canada, Bebo, Hi5, Facebook, MySpace, Twitter, LinkedIn, Google+, Orkut, Tuenti used in Spain, Nasza-Klasa in Poland, Cyworld mostly used in Asia, etc. are some of the popular social networking sites.</p></section>
+            </td>
+            <td style="height:100px;width:10px;border-radius: 30px;border-spacing: 30px;"></td>
+            <td align="justify" style="height:100px;width:300px;border:15px solid white;border-radius: 30px;background-color: white;">
+                <h2 align="center">Methods</h2>
+                <section><p>We needed a dataset of fake and genuine profiles. Various attributes included in the dataset are a number of friends, followers, status count. Dataset is divided into training and testing data. Classification algorithms are trained using a training dataset and the testing dataset is used to determine the efficiency of the algorithm. From the dataset used, 80% of both profiles (genuine and fake) are used to prepare a training dataset and 20% of both profiles are used to prepare a testing dataset.</p><p>Efficiency/Accuracy = Number of predictions/Total<br>Number of Predictions Percent Error = (1-Accuracy)*100<br>Confusion Matrix - Confusion Matrix is a technique for summarizing the performance of a classification algorithm. Calculating a confusion matrix can give you a better idea of what your classification model is getting right and what types of errors it is making.<br>TPR- True Positive Rate TPR=TP/(TP+FN)<br>FPR- False Positive Rate FPR=FP/(FP+TN)<br>TNR- True Negative Rate TNR=TN/(FP+TN)<br>FNR- False Negative Rate FNR=1-TPR<br>Recall- How many of the true positives were recalled (found), i.e. how many of the correct hits were also found.<br>Recall = TP / (TP+FN)<br>Precision- Precision is how many of the returned hits were true positive i.e. how many of the found were correct hits.<br>Precision = TP / (TP + FP)<br>F1 score- F1 score is a measure of a test's accuracy. It considers both the precision p and the recall r of the test to compute the score.<br>ROC Curve- The Receiver Operating Characteristic is the plot of TPR versus FPR. ROC can be used to compare the performances of different classifiers.</section>
+                <footer><br><h2 align="center">ROC Curve</h2><img src="Amrit2.png" width="340px" height="240"></footer>
+            </td>
+            <td style="height:100px;width:10px;border-radius: 30px;border-spacing: 30px;"></td>
+            <td align="justify" style="height:100px;width:300px;border:15px solid white;border-radius: 30px;background-color: white;">
+                <h2 align="center">Results</h2>
+                <section><p>In today’s online social networks there have been a lot of problems like fake profiles, online impersonation, etc. To date, no one has come up with a feasible solution to these problems. In this project, I intend to give a framework with which the automatic detection of fake profiles can be done so that the social life of people become secured and by using this automatic detection technique we can make it easier for the sites to manage the huge number of profiles, which can’t be done manually.</p><p>The detection process starts with the selection of the profile that needs to be tested. After the selection of the profile, the suitable attributes (i.e. features) are selected on which the classification algorithm is implemented. The attributes extracted is passed to the trained classifier. The classifier gets trained regularly as new training data is feed into the classifier. The classifier determines whether the profile is fake or genuine. The classifier may not be 100% accurate in classifying the profile so; the feedback of the result is given back to the classifier. This process repeats and as the time proceeds, the no. of training data increases and the classifier becomes more and more accurate in predicting the fake profiles.</p></section>
+                <footer><br><br><br><br><br><br><br><br><br><h2 align="center">Confusion Matrix</h2><img src="Amrit3.png" width="300px" height="240"></footer>
+            </td>
+            <td style="height:100px;width:10px;border-radius: 30px;border-spacing: 30px;"></td>
+            <td align="justify" style="height:100px;width:350px;border:15px solid white;border-radius: 30px;background-color: white;">
+                <h2 align="center">Conclusions</h2>
+                <section><p>We have given a framework using which we can identify fake profiles in any online social network by using Random Forest Classifier with a very high efficiency as high as around 95%. Fake profile Identification can be improved by applying NLP techniques and Neural Networks to process the posts and the profiles. In the future, we wish to classify profiles by taking profile pictures as one of the features.</p><p>Each profile (or account) in a social network contains lots of information such as gender, no. of friends, no. of comments, education, work, etc. Some of this information is private and some are public. Since private information is not accessible so, we have used only the information that is public to determine the fake profiles in the social network. However, if our proposed scheme is used by the social networking companies itself then they can use the private information of the profiles for detection without violating any privacy issues. We have considered this information as features of a profile for the classification of fake and real profiles.</p></section><br><br>
+                <footer><h2 align="center">Bibliography</h2>
+                <ol>
+                    <li>Nazir, Atif, Saqib Raza, Chen-Nee Chuah, Burkhard Schipper, and C. A. Davis. “Ghostbusting Facebook: Detecting and Characterizing Phantom Profiles in Online Social Gaming Applications.” In WOSN. 2010.</li>
+                    <li>Adikari, Shalinda, and Kaushik Dutta. “Identifying Fake Profiles in LinkedIn.” In PACIS, p. 278. 2014.</li>
+                    <li>Chu, Zi, Steven Gianvecchio, Haining Wang, and Sushil Jajodia. “Who is tweeting on Twitter: human, bot, or cyborg?.” In Proceedings of the 26th annual computer security applications conference, pp. 21- 30. ACM, 2010.</li>
+                    <li>Stringhini, Gianluca, Gang Wang, Manuel Egele, Christopher Kruegel, Giovanni Vigna, Haitao Zheng, and Ben Y. Zhao. “Follow the green: growth and dynamics in twitter follower markets.” In Proceedings of the 2013 conference on Internet measurement conference, pp. 163-176. ACM, 2013.</li>
+                </ol>
+            </footer>
+            </td>
+        </tr>
+        <tr>
+            <tfoot>
+                <td colspan="7" style="height:10px;color:white" align="right">
+                    By Amritansh Anand 20BCE1650
+                </td>
+            </tfoot>
+        </tr>
+    </table>
+</body>
+</html>
